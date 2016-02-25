@@ -55,6 +55,7 @@
     <Compile Include="PrimesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FactorsTests.cs" />
+    <Compile Include="RomanNumeralsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MathHelper\MathHelper.csproj">
