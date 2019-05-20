@@ -89,25 +89,25 @@ namespace MathHelper
                 {
                     result.Append("M");
                 }
-                value = value - (numberOfThousandIncrements * 1000);
+                value -= (numberOfThousandIncrements * 1000);
             }
 
             if(value >= 900)
             {
                 result.Append("CM");
-                value = value - 900;
+                value -= 900;
             }
 
             if(value >= 500)
             {
                 result.Append("D");
-                value = value - 500;
+                value -= 500;
             }
 
             if(value >= 400)
             {
                 result.Append("CD");
-                value = value - 400;
+                value -= 400;
             }
 
             if(value >= 100)
@@ -117,19 +117,19 @@ namespace MathHelper
                 {
                     result.Append("C");
                 }
-                value = value - (numberOfHundredIncrements * 100);
+                value -= (numberOfHundredIncrements * 100);
             }
 
             if(value >= 50)
             {
                 result.Append("L");
-                value = value - 50;
+                value -= 50;
             }
 
             if(value >= 40)
             {
                 result.Append("XL");
-                value = value - 40;
+                value -= 40;
             }
 
             if(value >= 10)
@@ -139,25 +139,25 @@ namespace MathHelper
                 {
                     result.Append("X");
                 }
-                value = value - (numberOfTensIncrements * 10);
+                value -= (numberOfTensIncrements * 10);
             }
 
             if(value >= 9)
             {
                 result.Append("IX");
-                value = value - 9;
+                value -= 9;
             }
 
             if(value >= 5)
             {
                 result.Append("V");
-                value = value - 5;
+                value -= 5;
             }
 
             if(value >= 4)
             {
                 result.Append("IV");
-                value = value - 4;
+                value -= 4;
             }
 
             if(value > 0)

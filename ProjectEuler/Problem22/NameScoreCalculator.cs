@@ -16,8 +16,7 @@ namespace Problem22
             ConcurrentBag<int> characterScores = new ConcurrentBag<int>();
             Parallel.ForEach(letters, letter =>
             {
-                int score;
-                if (!LetterScores.TryGetValue(letter.ToString().ToUpper(), out score))
+                if (!LetterScores.TryGetValue(letter.ToString().ToUpper(), out int score))
                 {
                     throw new ArgumentException(string.Format("Invalid Character: {0}", letter));
                 }
@@ -27,7 +26,7 @@ namespace Problem22
             return characterScores.Sum();
         }
 
-        private static ConcurrentDictionary<string, int> LetterScores = new ConcurrentDictionary<string, int>(new List<KeyValuePair<string, int>>()
+        private static readonly ConcurrentDictionary<string, int> LetterScores = new ConcurrentDictionary<string, int>(new List<KeyValuePair<string, int>>()
         {
             new KeyValuePair<string, int>("A", 1),
             new KeyValuePair<string, int>("B", 2),

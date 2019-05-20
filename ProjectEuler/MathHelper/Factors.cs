@@ -10,15 +10,17 @@ namespace MathHelper
     {
         public static IEnumerable<long> FindFactors(long number)
         {
-            List<long> factors = new List<long>();
+            List<long> factors = new List<long>
+            {
 
-            // A number always has 1 and itself as factors
-            factors.Add(1);
-            factors.Add(number);
+                // A number always has 1 and itself as factors
+                1,
+                number
+            };
 
             // Start at 2 and add factors that evenly divide (along with the division result)
             // until we reach a number already in the list.
-            for(long l = 2; l <= number; l++)
+            for (long l = 2; l <= number; l++)
             {
                 if(factors.Contains(l))
                 {
